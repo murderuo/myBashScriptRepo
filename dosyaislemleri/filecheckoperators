@@ -1,0 +1,113 @@
+#! /bin/bash
+
+
+
+echo -e "dosya ismi giriniz\c" # -e argümanı cursoru satır sonunda tutar \c cursor denemk
+read dosyaismi
+#if -e exist var olup olmadığını kontrol ediyor
+# if [ -e $dosyaismi ]
+# then
+#     echo "$dosyaismi isminde dosya var"
+# else
+#     echo "$dosyaismi isminde bir dosya yok"
+# fi
+
+# if [ -f $dosyaismi ] #dosya var mı ve standart bir dosya mı
+# #içine yazılabilen, çalıştırılabilen bir dosya mı
+# then
+#     echo "$dosyaismi standart bir dosya değil"
+# else
+#     echo "$dosyaismi standart bir dosya"
+# fi
+
+# if [ -s $dosyaismi ] #dosya içeriği dolu mu boş mu
+
+# then
+#     echo "$dosyaismi dosya içi boş"
+# else
+#     echo "$dosyaismi dosya içi dolu"
+# fi
+
+
+# if [ -d $dosyaismi ] #klasör mü dosya mı
+
+# then
+#     echo "$dosyaismi girilen isimde klasör var"
+# else
+#     echo "$dosyaismi girilen isimde bir klasör yok"
+# fi
+
+# if [ -r $dosyaismi ] #okunabilir mi değil mi
+
+# then
+#     echo "$dosyaismi okunabilir bir dosya"
+# else
+#     echo "$dosyaismi dosyası okunabilir değil"
+# fi
+
+# if [ -w $dosyaismi ] #dosya yazılabilir mi
+
+# then
+#     echo "$dosyaismi yazılabilir bir dosya"
+# else
+#     echo "$dosyaismi yazılabilir bir dosya değil"
+# fi
+
+# if [ -x $dosyaismi ] #dosya çalıştırılabilir bir dosya mı
+
+# then
+#     echo "$dosyaismi çalıştırılabilir bir dosya"
+# else
+#     echo "$dosyaismi çalıştırılabilir bir dosya değil"
+# fi
+
+# file="/var/www/tutorialspoint/unix/test.sh"
+
+# if [ -r $file ]
+# then
+#    echo "File has read access"
+# else
+#    echo "File does not have read access"
+# fi
+
+# if [ -w $file ]
+# then
+#    echo "File has write permission"
+# else
+#    echo "File does not have write permission"
+# fi
+
+# if [ -x $file ]
+# then
+#    echo "File has execute permission"
+# else
+#    echo "File does not have execute permission"
+# fi
+
+# if [ -f $file ]
+# then
+#    echo "File is an ordinary file"
+# else
+#    echo "This is sepcial file"
+# fi
+
+# if [ -d $file ]
+# then
+#    echo "File is a directory"
+# else
+#    echo "This is not a directory"
+# fi
+
+# if [ -s $file ]
+# then
+#    echo "File size is zero"
+# else
+#    echo "File size is not zero"
+# fi
+
+# if [ -e $file ]
+# then
+#    echo "File exists"
+# else
+#    echo "File does not exist"
+# fi

@@ -1,0 +1,17 @@
+#! /bin/bash
+
+
+echo -e "dosya ismi girini: \c"
+read dosyaismi
+
+if [ -f $dosyaismi ]
+then
+    if [ -w $dosyaismi ]
+    then
+        echo "dosya yazılabilir bir dosyadır,"
+        echo "editlemek için açılıyor. çıkmak için Ctrl + D tuşuna basın"
+        cat >> $dosyaismi
+    fi
+else
+    echo "böyle bir dosya yok"
+fi
