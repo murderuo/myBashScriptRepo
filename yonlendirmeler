@@ -1,0 +1,55 @@
+#! /bin/bash
+
+
+# YÖNLENDİRME
+
+# 3 iletişim kanalı
+
+# 1 INPUT ----> Klavye < (0)
+# 2 OUTPUT----> EKRAN (Standart output - çıktı) > (1)
+# 3 OUTPUT----> EKRAN (Standart error  - hata)  2> (2)
+
+# komut > dosya (Komutun çıktısı dosyaya yazılır)
+
+# komut >> dosya (Komutun çıktısı dosya sonuna yazılır)
+
+# komut < dosya (Komutun girdisi dosyadan okunur)
+
+# komut >| dosya (noclobber set edilmiş olsa dahi komut çıktısı dosyaya yazılır)
+
+# komut 2> dosya (Komutun hataları dosyaya yazılır)
+
+# komut > dosya 2>&1 (Komutun çıktısı ve hataları aynı dosyaya yazılır)
+
+# komut &> dosya (Komutun çıktısı ve hataları aynı dosyaya yazılır)
+
+# komut &>> dosya (Komutun çıktısı ve hataları aynı dosyanın sonuna eklenir)
+
+
+# ugur@ubuntu:~/Desktop$ find /etc -name network > hatasiz
+# find: ‘/etc/ssl/private’: Permission denied
+# find: ‘/etc/vmware-tools/GuestProxyData/trusted’: Permission denied
+# find: ‘/etc/cups/ssl’: Permission denied
+# find: ‘/etc/polkit-1/localauthority’: Permission denied
+# ugur@ubuntu:~/Desktop$ cat hatasiz 
+# /etc/systemd/network
+# /etc/vmware-tools/scripts/vmware/network
+# /etc/network
+# ugur@ubuntu:~/Desktop$ find /etc -name network 2> hatali_ciktilar
+# /etc/systemd/network
+# /etc/vmware-tools/scripts/vmware/network
+# /etc/network
+# ugur@ubuntu:~/Desktop$ cat hatali_ciktilar 
+# find: ‘/etc/ssl/private’: Permission denied
+# find: ‘/etc/vmware-tools/GuestProxyData/trusted’: Permission denied
+# find: ‘/etc/cups/ssl’: Permission denied
+# find: ‘/etc/polkit-1/localauthority’: Permission denied
+# ugur@ubuntu:~/Desktop$ find /etc -name network &> hatali_hatasiz
+# ugur@ubuntu:~/Desktop$ cat hatali_hatasiz 
+# find: ‘/etc/ssl/private’: Permission denied
+# /etc/systemd/network
+# /etc/vmware-tools/scripts/vmware/network
+# find: ‘/etc/vmware-tools/GuestProxyData/trusted’: Permission denied
+# /etc/network
+# find: ‘/etc/cups/ssl’: Permission denied
+# find: ‘/etc/polkit-1/localauthority’: Permission denied

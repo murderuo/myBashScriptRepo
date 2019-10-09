@@ -1,0 +1,38 @@
+#! /bin/bash
+
+
+sayi1=20
+sayi2=4
+
+
+echo $sayi1+$sayi2 | bc #değişken kullanarak yapmak
+
+echo "20+5" | bc  #tırnak içinde string bir ifade çalışmıyor
+echo "20-5" | bc  #tırnak içinde string bir ifade çalışmıyor
+echo "20*5" | bc  #tırnak içinde string bir ifade çalışmıyor
+echo "20/5.1" | bc  #tırnak içinde string bir ifade çalışmıyor
+
+echo "scale=2;20/5.4" | bc #float ifadeler için scale demek virgülden sonra 2 basamak göster
+
+echo "scale=2;$sayi1/$sayi2" | bc
+
+echo "scale=2; $sayi2^3" | bc -l # -l argümanı library kullarak gerçekleştir demek
+
+echo "scale=3;sqrt($sayi1)" | bc -l #virgülden sonra 3 basamak göstererek sayi1 değişkenin karekökünü al
+
+
+
+
+
+
+
+
+#echo "toplam 20+4" | bc  #bc isimli kütüphaneyi kullanıyoruz
+
+# echo "fark $sayi1-$sayi2" | bc
+
+
+
+
+                     
+

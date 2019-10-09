@@ -1,0 +1,12 @@
+#! /bin/bash
+
+i=1
+
+while (( $i <= 10 ))
+do
+    echo $i
+    #i=$(($i+1)) #bir arttır i ye eşitle
+    ((i++)) #bir arttır i ye eşitle
+    sleep 0.1 # bir salise aralıklarla yazdır
+    #sleep 1 #bir saniye bekleterek yazdır
+done

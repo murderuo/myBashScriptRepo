@@ -1,0 +1,26 @@
+#!/bin/bash
+
+##birinci gösterim###
+# for (( i=0;i<=5;i++))
+# do
+#     echo "i.nin değeri: $i"
+
+# done
+
+###ikinci gösterim komutlar üzerinden###
+
+# for i in ls pwd
+# do
+#     echo "uygulanacak komut: $i"
+#     $i #burada komut uygulanıyor
+#     sleep 0.5
+# done
+
+###üçüncü kullanım şekli
+
+for i in {1..10..2} #i 1 den 10 a kadar 2 ser 2 ser arttır  
+do
+    echo "i nin değeri: $i"
+    #$i #burada komut uygulanıyor
+    #sleep 0.5
+done

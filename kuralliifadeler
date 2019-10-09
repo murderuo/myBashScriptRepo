@@ -1,0 +1,110 @@
+#! /bin/bash
+
+# ^   Satır başı anlamına gelir.
+#  $   Satır sonu anlamına gelir.
+#  .   Herhangi bir karakter demektir.
+#  *   Kendisinden önceki karakterleri tekrarlatır.
+#  []  Köşeli parantez içerisindeki karakterlerden biri gelebilir.
+#  [^] Köşeli parantez içerisindeki karakter haricinde bir karakter gelebilir.
+
+
+# ugur@ubuntu:~/Desktop$ cat words | grep .kar.
+# Ankara
+# Ankara's
+# Dakar's
+
+# ugur@ubuntu:~/Desktop$ cat words | grep ^kar*
+# kabob
+# kabob's
+# kabobs
+
+# ugur@ubuntu:~/Desktop$ cat words | grep ^kar.
+# karakul
+# karakul's
+# karaoke
+
+# ugur@ubuntu:~/Desktop$ cat words | grep ^ar*
+# a
+# aardvark
+# aardvark's
+# aardv
+
+# ugur@ubuntu:~/Desktop$ cat words | grep ^arm*
+# arabesque
+# arabesque's
+# arabesques
+# armorers
+# armories
+# armoring
+
+# ugur@ubuntu:~/Desktop$ cat words | grep ^arm$
+# arm
+
+# ugur@ubuntu:~/Desktop$ cat words | grep ^k...m
+# kilometer
+# kilometer's
+# kilometers
+# kinematic
+# kinematics
+# kinsman
+# kinsman's
+# kinsmen
+
+
+
+
+# ugur@ubuntu:~/Desktop$ cat words | grep kar | grep -v ^kar | grep -v kar$
+# Ankara
+# Ankara's
+# Dakar's
+
+# ugur@ubuntu:~/Desktop$ cat words | grep -i ^k...m
+# Kalamazoo
+# Kalamazoo's
+# Karamazov
+# Karamazov's
+# Kashmir
+# Kashmir's
+# Kaufman
+# Kaufman's
+# Kilimanjaro
+# Kilimanjaro's
+# Kolyma
+# Kolyma's
+# kilometer
+# kilometer's
+# kilometers
+# kinematic
+# kinematics
+# kinsman
+# kinsman's
+# kinsmen
+
+# ugur@ubuntu:~/Desktop$ cat words | grep -ic ^k...m
+# 20
+
+# ugur@ubuntu:~/Desktop$ cat words | grep -in ^k...m
+# 9147:Kalamazoo
+# 9148:Kalamazoo's
+# 9206:Karamazov
+# 9207:Karamazov's
+# 9238:Kashmir
+# 9239:Kashmir's
+# 9280:Kaufman
+# 9281:Kaufman's
+# 9472:Kilimanjaro
+# 9473:Kilimanjaro's
+# 9617:Kolyma
+# 9618:Kolyma's
+# 59374:kilometer
+# 59375:kilometer's
+# 59376:kilometers
+# 59425:kinematic
+# 59426:kinematics
+# 59459:kinsman
+# 59460:kinsman's
+# 59461:kinsmen
+
+
+
+

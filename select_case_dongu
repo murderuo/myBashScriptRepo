@@ -1,0 +1,19 @@
+#! /bin/bash
+#genelde case ile birlikte kullanılır
+isimler=( "ankara" "istanbul" "izmir" "bursa" )
+#select il in ankara istanbul izmir bursa #1. kullanım şekli
+select il in ${isimler[@]} # isimler dizisinin tüm elemanlarını ekrana bastırıyor
+do 
+    case $il in
+    ankara )
+        echo "Ankara seçilmiştir." ;;
+    istanbul )
+        echo "İstambul seçilmiştir.";;
+    3 )
+        echo "izmir seçilmiştir.";;
+    4 )
+        echo "bursa seçilmiştir.";;
+    * )
+        echo "lütfen 1 ile 4 arasında bir seçim yapınız";;
+    esac
+done

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+##break
+# for (( i=0;i<=10;i++))
+# do
+#     if (( i>5 ))
+#     then
+#     break
+#     fi
+#     echo $i
+# done
+
+##continue
+toplam=0
+for (( i=0;i<=10;i++ ))
+do
+    if (( i%2==0 ))
+    then
+    ((toplam=toplam+i))
+    continue
+    fi
+done
+echo $toplam
+

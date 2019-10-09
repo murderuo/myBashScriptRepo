@@ -1,0 +1,16 @@
+#! /bin/bash
+
+echo $BASH
+echo $BASH_VERSION
+echo $HOME
+echo $PWD
+
+isim=Ugur
+soyisim=okur
+
+echo $isim  $soyisim
+
+sayi1=5
+sayi2=7
+
+echo $sayi1

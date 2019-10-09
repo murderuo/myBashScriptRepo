@@ -1,0 +1,32 @@
+#! /bin/bash
+
+os=( "windows" "Linux" "MacOs" )
+
+echo ${os[@]} #dizinin tüm elemanlarını göster
+
+echo ${os[2]} #dizinin ikinci elemanını göster
+
+echo ${!os[@]} #dizinin indeks sırasını göster
+
+echo ${#os[@]} #dizinin eleman sayısını göster
+
+echo "-e eklenecek işletim sistemini giriniz: \c"
+read add_os
+
+os[${#os[@]}+1]=$add_os #dizinin eleman sayısı +1 inci elemanına yeni bir eleman ekle
+
+echo "eklenen eleman: ${os[${#os[@]}]}"
+
+echo "yeni dizi ${os[@]}"
+
+echo -e "hangi elamanı listeden çıkaracaksınız"
+
+read index
+(( $index-1 ))#girilen değişkenin 1 azaltıyoruz
+unset os[$index]
+
+#echo -e "eleman çıkarıldı: ${os[@]}"
+
+# unset os[1] #1. elemanı çıkar dikkat indeks numarası da çıkarılıyor
+
+echo "yeni dizi ${os[@]}"

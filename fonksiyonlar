@@ -1,0 +1,47 @@
+#! /bin/bash
+
+### birinci gösterim
+
+# function merhabaDunya(){
+
+#     echo "Merhaba Dünya"
+
+
+# }
+
+
+# merhabaDunya
+# #merhaba
+# #### ikinci gösterim
+
+# merhaba(){
+
+
+#     echo "buda ikinci fonksiyon gösterimi"
+
+
+# }
+
+# merhaba 
+
+echo -e "Bir sayı giriniz:\c"
+read sayi
+
+kareYap(){
+    i=$((sayi*sayi))
+    echo "girilen sayının karesi $i"
+    #yada
+    #echo "girile sayının karesi $((sayi*sayi))"
+}
+
+kareYap
+
+function ciktiVer(){
+    echo $1 $2 # fonksiyondan sonra yazılan parametreleri ekrana  basar
+
+}
+
+ciktiVer birinci ikinci ucuncu #burada birinci ve ikinci yazdırılırken
+#ucuncu parametre yazdırılmıyor.
+
+

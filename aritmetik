@@ -1,0 +1,28 @@
+#! /bin/bash
+
+# echo "birinci sayı giriniz"
+# read sayi
+# echo "ikinci sayıyı giriniz"
+# read sayi2
+
+# topla = $(( sayi + sayi2 ))
+
+# echo "toplam $topla"
+
+sayi1=25
+sayi2=5
+
+echo $(( sayi1 + sayi2))
+echo $(( sayi1 - sayi2))
+echo $(( sayi1 / sayi2))
+echo $(( sayi1 * sayi2)) 
+echo $(( sayi1 % sayi2)) #mod alma
+
+
+#ikinci yol
+
+echo $( expr $sayi1 + $sayi2 )
+echo $( expr $sayi1 - $sayi2 )
+echo $( expr $sayi1 \* $sayi2 ) #carpma işlemindeki * için kaçış karakteri kullanmak gerekiyor
+echo $( expr $sayi1 / $sayi2 )
+echo $( expr $sayi1 % $sayi2 ) #mod alma

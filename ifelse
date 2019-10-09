@@ -1,0 +1,36 @@
+#! /bin/bash
+
+# sayi1=20
+# sayi2=20
+
+# if (( $sayi1 != $sayi2 )) 
+# then
+
+# echo "sayı eşit değil"
+
+# else
+
+# echo "saılar eşit"
+
+# fi
+
+# ad="ugur"
+# soyad="okur"
+
+# if (( $ad = $soyad ))
+# then
+
+# echo "isim soyisme eşit"
+
+# else
+
+# echo "isim ve soyisim farklı"
+
+# fi
+
+isim="ugur"
+yas=40
+if (( $isim=="ugur" || $yas==32 ))
+then
+echo "bir koşul sağlandı"
+fi

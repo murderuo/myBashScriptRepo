@@ -1,0 +1,22 @@
+#! /bin/bash
+# ; işareti komutları yan yana kullanabilmemizi sağlar.
+echo ls;ls -lap;cal
+
+# * karakteri aşağıda
+echo ls -l f*
+# baş harfi f ile başlayanları listeliyor.
+
+# ? karakteri bir karakter anlamında
+
+# [  ] köşeli parantez içi regex gibi davranıyor
+#örnek olarak 
+# ls -l [de] d veya e ile başlayan dosyaları listele
+
+
+# ^ karakteri köşeli parantez içinde
+#[^u] u ile başlamayan dosyalar
+#ls -l [^u]*   --> u ile başlamayıp herhangi biri ile
+#edvam edenler (* karakteri.)
+
+# { } süslü parantez
+# { } döngü gibi davranır

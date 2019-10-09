@@ -1,0 +1,8 @@
+#! /bin/bash
+
+i=1
+until ((i>10)) #i 10dan büyük oluncaya kadar yap
+do
+    echo $i
+    ((i++))
+done

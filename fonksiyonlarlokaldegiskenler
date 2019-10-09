@@ -1,0 +1,16 @@
+#! /bin/bash
+
+ciktiVer(){
+
+    local isim="Feyyaz" #değişkeni lokalde tanımlamak için
+    #local ifadesini kullanıyoruz.
+    echo "isim değişkeni: $isim"
+}
+
+isim="burgan"
+
+echo "globaldeki değer: $isim"
+
+ciktiVer Ahmet
+
+echo "Tekrar global değişken kontrolü:$isim"
