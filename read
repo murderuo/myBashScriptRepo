@@ -1,0 +1,36 @@
+#! /bin/bash
+
+##
+#echo "isminiz "
+
+#read isim
+
+
+#echo "isminiz ->$isim" 
+
+#echo "soyisimler:"
+#read i1 i2 i3
+#echo "soy isimler: " $i1 $i2 $i3
+
+
+#comment line
+
+#read -p "isminiz " isim
+
+#echo "hoş geldin" $isim
+
+
+#silent şifre girişleri 
+#normal hali
+#read -p "şifreniz" sifre
+#echo "$sifre"
+#silent -görünmez olarak- hali
+#read -sp "şifreniz" sifre
+#echo
+#echo "şifreniz" $sifre
+
+
+## arguments (dizi mantığı)
+read -a isimler #argument olarak alıyor
+echo ${isimler[0]} #0. isim
+echo ${isimler[2]} #2. isim
